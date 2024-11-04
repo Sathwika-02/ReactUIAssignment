@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ReactUIAssignment/static/css/main.d009957e.css",
-    "main.js": "/ReactUIAssignment/static/js/main.27826786.js",
+    "main.js": "/ReactUIAssignment/static/js/main.65bd66af.js",
     "static/media/Female05.svg": "/ReactUIAssignment/static/media/Female05.eaa75a73f4eba32c745dd74e8804329c.svg",
     "static/media/Kate.svg": "/ReactUIAssignment/static/media/Kate.89397f2c638c965fa963eb3b148b1318.svg",
     "static/media/Male11.svg": "/ReactUIAssignment/static/media/Male11.d3bdd7dc3ab94f28e0d026df0cce706d.svg",
@@ -17,10 +17,10 @@
     "static/media/Broadcast.svg": "/ReactUIAssignment/static/media/Broadcast.f72a84ea7405444df92dbb83a0d421d6.svg",
     "index.html": "/ReactUIAssignment/index.html",
     "main.d009957e.css.map": "/ReactUIAssignment/static/css/main.d009957e.css.map",
-    "main.27826786.js.map": "/ReactUIAssignment/static/js/main.27826786.js.map"
+    "main.65bd66af.js.map": "/ReactUIAssignment/static/js/main.65bd66af.js.map"
   },
   "entrypoints": [
     "static/css/main.d009957e.css",
-    "static/js/main.27826786.js"
+    "static/js/main.65bd66af.js"
   ]
 }
