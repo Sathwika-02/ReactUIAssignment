@@ -1,0 +1,47 @@
+.orders{
+    display:flex;
+    height: 100%;
+    width: 98%;
+    max-height: 100vh;
+    .sidebar{
+        flex:1;
+        // background-color: pink;
+    }
+    .orderContainer{
+        flex: 4;
+        overflow-y: auto;
+        overflow-x: auto;
+
+        /* Custom scrollbar styles for WebKit browsers */
+        &::-webkit-scrollbar {
+            width: 8px; /* Width of the vertical scrollbar */
+            height: 8px; /* Height of the horizontal scrollbar */
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f0f0f0; /* Light gray background for the track */
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #d3d3d3; /* Light gray color for the thumb */
+            border-radius: 10px; /* Rounded corners for the thumb */
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #b0b0b0; /* Darker gray on hover */
+        }
+
+        /* For Firefox */
+        scrollbar-width: thin; /* Makes the scrollbar thin */
+        scrollbar-color: #d3d3d3 #f0f0f0; /* Thumb and track colors */
+
+        /* Adjust hover styles for Firefox */
+        &:hover {
+            scrollbar-color: #b0b0b0 #f0f0f0; /* Darker thumb color on hover */
+        }
+    }
+    .rightsidebar{
+        flex:1;
+        // background-color: yellow;
+    }
+}

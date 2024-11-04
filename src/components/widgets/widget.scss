@@ -1,0 +1,44 @@
+.widget{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 45%;
+    max-width: 100%;
+    padding: 15px;
+    -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+    border-radius: 10px;
+    height: 125px;
+    margin: 10px;
+    cursor: pointer;
+
+    .widget_container{
+        width: 100%;
+        .widget_title{
+            font-size: 15px;
+            font-weight: bold;
+        }
+       .widget_item{
+        display: flex;
+        justify-content: space-between;
+        .widget_left{
+            .widget_count{
+            font-size: 25px;
+            font-weight: bold;
+            }
+        }
+        .widget_right{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            span{
+                font-size: 12px;
+            }
+            .icon{
+                font-size: 18px;
+            }
+        }
+       }
+    }
+    
+}

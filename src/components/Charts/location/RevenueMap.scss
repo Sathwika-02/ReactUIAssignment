@@ -1,0 +1,17 @@
+
+.revenue_map {
+    flex: 1; 
+    height: 50%; 
+    transform: scale(0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .revenue_location{
+        font-size: 16px;
+    }
+    > div {
+      width: 100%; 
+      height: 100%; 
+    }
+  }

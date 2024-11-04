@@ -1,0 +1,42 @@
+
+.order-container::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+    width: 8px; /* Width of the vertical scrollbar */
+  }
+  
+  .order-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded edges for the scrollbar thumb */
+  }
+  
+  .order-container::-webkit-scrollbar-track {
+    background: transparent; /* Background of the scrollbar track */
+  }
+  
+  /* Custom scrollbar styles for Firefox */
+  .order-container {
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Thumb color and track color */
+  }
+
+  /* Styling the horizontal scrollbar in the DataGrid */
+.MuiDataGrid-scrollbar--horizontal::-webkit-scrollbar {
+    height: 4px; /* Set height for horizontal scrollbar */
+}
+
+.MuiDataGrid-scrollbar--horizontal::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.7); /* Light gray for the scrollbar thumb */
+    border-radius: 4px; /* Rounded edges */
+}
+
+.MuiDataGrid-scrollbar--horizontal::-webkit-scrollbar-track {
+    background-color: rgba(211, 211, 211, 0.3); /* Very light gray for the scrollbar track */
+}
+
+/* Firefox scrollbar styling */
+.MuiDataGrid-scrollbar--horizontal {
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: rgba(128, 128, 128, 0.7) rgba(211, 211, 211, 0.3); /* Thumb and track color */
+}
+
+  
