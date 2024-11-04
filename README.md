@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# React Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern dashboard application built with React, utilizing Material-UI for design components, Chart.js for data visualization, and GitHub Pages for deployment. This application showcases a data grid with various functionalities, including sorting, filtering, and pagination, along with a sidebar for navigation.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Setup and Installation](#setup-and-installation)
+- [Design Decisions](#design-decisions)
+- [Challenges Faced](#challenges-faced)
+- [Improvements Made](#improvements-made)
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: A JavaScript library for building user interfaces.
+- **Material-UI**: A popular React UI framework for styling components.
+- **GitHub Pages**: For hosting the application.
+- **React Router**: For navigation within the application.
+- **@mui/x-data-grid**: For displaying tabular data with advanced features.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- A responsive layout that adapts to various screen sizes.
+- A sidebar for navigation.
+- A data grid that supports pagination, sorting, filtering, and selection of items.
+- Dark mode support for improved accessibility.
+- User-friendly interface with intuitive controls.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup and Installation
 
-### `npm run build`
+To set up and run the project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Sathwika-02/ReactUIAssignment.git
+   cd react-dashboard
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Make Sure Node.js is Installed**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+First, confirm that Node.js is installed on your machine. You can check this by running the following command:
 
-### `npm run eject`
+```bash
+node -v
+```
+If it outputs a version number, you're set. Otherwise, download and install Node.js.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.**Install Dependencies:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Run
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Start the Development Server:**
+ After installing the dependencies, start the application with:
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5.**View in Browser:**
+ Open your browser and go to http://localhost:3000 to view the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6.**Running the Application**
+To deploy the application to GitHub Pages, run the following command:
 
-### Code Splitting
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Design Decisions
+- The dashboard layout was designed to be intuitive, allowing users to easily navigate between different sections.
+- Material-UI was chosen for its extensive set of components and responsive design features, which helped speed up the development process.
+- The sidebar uses icons for better visual representation and to enhance user experience.
+- FontAwesome and CoreUI icons were utilized to provide a consistent and accurate iconography throughout the application.
+- Redux was implemented for storing and managing the global state, making it easier to manage data flow across components.
+- The Context API was used to manage dark and light mode settings.
+- A brightness icon is located beside the search bar; clicking it toggles between dark mode and light mode.
+- Navigation is intuitive: clicking on "Dashboard" in the navbar directs users to the main page, while clicking on "Orders" in the homepage widget takes them to the orders page.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Challenges Faced
+- **Deployment Issues:** Initially encountered problems deploying the app to GitHub Pages, especially with routing and asset paths. This was resolved by setting the correct homepage property in package.json.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Redux State Management:** Managing global state with Redux was challenging at first, but with some practice, it became easier to handle data flow across components.
 
-### Advanced Configuration
+- **Chart.js and World Map Design:** Faced some design challenges with Chart.js, especially with customizing the world map. Researched and tested different approaches to get the desired look and functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Improvements Made
+- **Dark Mode:** Added a dark mode option to make the app easier to use in low-light settings.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Data Grid Sorting and Filtering:** Enabled sorting and filtering in the data grid to make data easier to view and manage.
