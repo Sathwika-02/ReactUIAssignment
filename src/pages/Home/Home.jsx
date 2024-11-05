@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useSelector } from 'react-redux';
 import SideBar from '../../components/SideBar/SideBar'
 import RightSideBar from '../../components/RightSideBar/RightSideBar'
@@ -14,7 +14,7 @@ import DataTable from '../../components/DataTable/DataTable'
 import RingChart from '../../components/Charts/Doughnut/RingChart'
 import { useNavigate } from 'react-router-dom';
 import { DarkModeContext } from '../../context/darkModeContext';
-
+import MenuIcon from "@mui/icons-material/Menu"
 const Home = () => {
     const navigate = useNavigate();
     const { darkMode } = useContext(DarkModeContext);
@@ -25,13 +25,34 @@ const Home = () => {
     const handleOrdersClick = () => {
       navigate('/orders');
     };
+    const [isSidebarOpen, setSidebarOpen] = useState(false);
+    const [isrightsidebaropen,setisrightsidebaropen]=useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+  const togglerightsidebar=()=>{
+    setisrightsidebaropen(!isrightsidebaropen)
+  }
+
   return (
     <div className='home'>
-        <div className="sidebar">
+        {/* <div className="sidebar">
       <SideBar/>
+      </div> */}
+      
+      <div className="menu-icon" onClick={toggleSidebar}>
+        <MenuIcon fontSize="large" />
       </div>
+      <div className="menu-icon1" onClick={togglerightsidebar}>
+        <MenuIcon fontSize="large" />
+      </div>
+
+      {/* Sidebar component */}
+      <SideBar opensidebar={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <div className="homeContainer">
         <Navbar/>
+      
     <div className="home_title">eCommerce</div>
 
     <div className="first_container">
@@ -109,7 +130,7 @@ const Home = () => {
 </div>
       </div>
       <div className="rightsidebar">
-      <RightSideBar/>
+      <RightSideBar openrightsidebar={isrightsidebaropen} togglerightsidebar={togglerightsidebar}/>
       </div>
     </div>
   )

@@ -13,11 +13,18 @@ body {
     height: 100vh;
     width: 100%;
     max-height: 100vh;
+    .menu-icon{
+      display: none;
+    }
+    .menu-icon1{
+      display: none;
+    }
     
     .sidebar{
         flex:0 0 18%;
         height: 100%;
         overflow-y:auto;
+       
         
         
         &::-webkit-scrollbar {
@@ -50,9 +57,9 @@ body {
             flex: 0 0 20%; // Resize for tablets
           }
       
-          @media (max-width: 480px) {
-            display: none; // Hide sidebar on mobile
-          }
+        //   @media (max-width: 480px) {
+        //     display: none; // Hide sidebar on mobile
+        //   }
     }
     .homeContainer{
         flex: 4;
@@ -224,7 +231,7 @@ body {
     // background-color: lightblue;
     }
     .rightsidebar{
-        flex:0 0 18%;
+        // flex:0 0 18%;
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
@@ -255,13 +262,13 @@ body {
         &:hover {
             scrollbar-color: #b0b0b0 #f0f0f0; 
         }
-        @media (max-width: 768px) {
-            flex: 0 0 20%; 
-          }
+        // @media (max-width: 768px) {
+        //     flex: 0 0 20%; 
+        //   }
       
-          @media (max-width: 480px) {
-            display: none; 
-          }
+          // @media (max-width: 480px) {
+          //   display: none; 
+          // }
     }
 }
 @media (max-width: 768px) {
@@ -275,6 +282,23 @@ body {
 }
 
 @media (max-width: 480px) {
+  .home .menu-icon{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    cursor: pointer;
+  }
+  .home .menu-icon1{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    position: absolute;
+  }
+  .rightsidebar{
+    flex: 0;
+  }
     .home .homeContainer .first_container .widgets .widget-item {
         flex: 1 1 45%; 
         max-width: 45%;

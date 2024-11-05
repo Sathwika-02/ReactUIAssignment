@@ -117,7 +117,7 @@ const DataGridComponent = () => {
 
   return (
     <div style={{ height: 600, width: '94%',margin:'22px' }}>
-      <h1>Project Table</h1>
+      <h1>Order List</h1>
       
 
       <Toolbar style={{ display: 'flex', justifyContent: 'space-between',backgroundColor:'#f7f9fb',minHeight:'54px !important' }}>

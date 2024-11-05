@@ -13,8 +13,9 @@ import { faBook,faIdCard,faIdBadge } from '@fortawesome/free-solid-svg-icons';
 import { CIcon } from '@coreui/icons-react';
 import {cilChatBubble} from "@coreui/icons";
 import { Link } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close"
 
-const SideBar = () => {
+const SideBar = ({opensidebar,toggleSidebar}) => {
     const [isUserProfileOpen, setIsUserProfileOpen] = useState(true);
     const [selectedDashboard, setSelectedDashboard] = useState("Default"); 
     const toggleUserProfileDropdown = () => {
@@ -24,7 +25,10 @@ const SideBar = () => {
         setSelectedDashboard(dashboard); 
     };
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${opensidebar ? "open" : ""}`}>
+      <div className="close-button" onClick={toggleSidebar}>
+      <CloseIcon />
+      </div>
       <div className="top">
         <div className="person_img">
           <img src={ByeWind} alt="No img" />
@@ -155,7 +159,9 @@ const SideBar = () => {
           </div>
         </div>
       </div>
+      {opensidebar && <div className="overlay" onClick={toggleSidebar}></div>}
     </div>
+    
   );
 };
 

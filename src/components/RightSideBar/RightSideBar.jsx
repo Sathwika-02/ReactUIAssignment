@@ -15,7 +15,8 @@ import Orlando from "../../../src/assets/images/Orlando.svg"
 import Andi from "../../../src/assets/images/Andi.svg"
 import Kate from "../../../src/assets/images/Kate.svg"
 import Koray from "../../../src/assets/images/Koray.svg"
-const RightSideBar = () => {
+import CloseIcon from "@mui/icons-material/Close"
+const RightSideBar = ({openrightsidebar,togglerightsidebar}) => {
   const notifications = [
     {
       id: 1,
@@ -59,7 +60,10 @@ const RightSideBar = () => {
     { name: "Koray Okumus", image: Koray },
   ];
   return (
-    <div className="rightsidebar1">
+    <div className={`rightsidebar1 ${openrightsidebar ? "open" : ""}`}>
+      <div className="close-button" onClick={togglerightsidebar}>
+      <CloseIcon />
+      </div>
       <div className="first">
         <div className="title">Notifications</div>
 
@@ -105,6 +109,7 @@ const RightSideBar = () => {
           </div>
         ))}
       </div>
+      {openrightsidebar && <div className="overlay" onClick={togglerightsidebar}></div>}
     </div>
   );
 };
